@@ -1,106 +1,150 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Daouda Keita</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background: #0d1117;
-            color: #e6edf3;
-        }
-        header {
-            background: #161b22;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            color: #58a6ff;
-        }
-        nav {
-            margin-top: 10px;
-        }
-        nav a {
-            color: #c9d1d9;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            color: #58a6ff;
-        }
-        section {
-            padding: 40px;
-            max-width: 900px;
-            margin: auto;
-        }
-        h2 {
-            color: #58a6ff;
-            border-bottom: 2px solid #30363d;
-            padding-bottom: 5px;
-        }
-        .projet {
-            background: #161b22;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        footer {
-            background: #161b22;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #8b949e;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Daouda</title>
+  <style>
+    :root{
+      --accent:#1282a2;
+      --accent-2:#16a6c6;
+      --muted:#6b7280;
+      --bg:#fbfbfc;
+      --card:#ffffff;
+      --maxw:1000px;
+      --radius:10px;
+      --gap:28px;
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#f7fbfd,#fbfbfb);
+      color:#1f2937;
+      -webkit-font-smoothing:antialiased;
+    }
+    .wrap{
+      max-width:var(--maxw);
+      margin:28px auto;
+      padding:24px;
+    }
+
+    header.hero{
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:#fff;
+      border-radius:var(--radius);
+      padding:44px 28px;
+      text-align:center;
+      box-shadow:0 6px 22px rgba(18,130,162,0.12);
+    }
+    header.hero h1{margin:0;font-size:34px;letter-spacing:-0.5px}
+    header.hero p{margin:12px auto 0;max-width:780px;color:rgba(255,255,255,0.95)}
+
+    .section{
+      margin-top:var(--gap);
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:0 6px 18px rgba(3,10,29,0.03);
+    }
+
+    .section h2{
+      margin:0 0 12px;
+      color:var(--accent);
+      display:inline-block;
+      padding-left:10px;
+      border-left:4px solid var(--accent-2);
+    }
+    .text-muted{color:var(--muted);line-height:1.6}
+
+    .cols{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px}
+    .col{flex:1;min-width:220px}
+
+    ul.clean{padding-left:18px;margin:8px 0}
+    ul.clean li{margin:8px 0;color:#24303a}
+
+    .project{
+      background:linear-gradient(180deg,#fff,#fcfeff);
+      border-radius:8px;padding:14px;margin:10px 0;border:1px solid #eef6f9;
+    }
+    .project h3{margin:0 0 8px;color:#0b6473}
+    .project p{margin:0;color:var(--muted)}
+
+    .contact-list{list-style:none;padding:0;margin:10px 0}
+    .contact-list li{margin:10px 0;color:#234;display:flex;gap:10px;align-items:center}
+    .contact-list a{color:var(--accent-2);text-decoration:none}
+
+    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:13px}
+    @media(max-width:720px){
+      header.hero h1{font-size:26px}
+      .cols{flex-direction:column}
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Portfolio de Daouda Keita</h1>
-        <nav>
-            <a href="#apropos">À propos</a>
-            <a href="#formation">Formation</a>
-            <a href="#projets">Projets</a>
-            <a href="#contact">Contact</a>
-        </nav>
+  <div class="wrap">
+    <header class="hero">
+      <h1>Bienvenue sur mon portfolio</h1>
+      <p>Je m'appelle <strong>Daouda</strong>, actuellement étudiant en <strong>BTS Informatique</strong>.
+        Passionné par le développement web, je présente ici mes projets, mes compétences et mon parcours.</p>
     </header>
 
-    <section id="apropos">
-        <h2>À propos</h2>
-        <p>Je suis un étudiant passionné par le développement web, la technologie et la création de projets numériques. 
-        Ce portfolio a été réalisé dans le cadre du mini-projet d’admission à SUPINFO.</p>
-    </section>
-
-    <section id="formation">
-        <h2>Formation</h2>
-        <ul>
-            <li><strong>SUPINFO</strong> – Mini-projet d’admission 2025</li>
-            <li><strong>Autoformation</strong> – HTML, CSS, JavaScript, Git et GitHub</li>
+    <section class="section" id="competences">
+      <h2>Mes compétences</h2>
+      <div class="text-muted">
+        <ul class="clean">
+          <li>HTML / CSS / JavaScript (bases + DOM)</li>
+          <li>SQL — gestion de bases de données (MySQL / phpMyAdmin)</li>
+          <li>Notions de programmation (algorithmes, logique)</li>
+          <li>Outils bureautiques : Word, Excel, PowerPoint</li>
         </ul>
+      </div>
     </section>
 
-    <section id="projets">
-        <h2>Projets</h2>
-        <div class="projet">
-            <h3>Portfolio en ligne</h3>
-            <p>Un site web personnel pour présenter mes compétences et mes réalisations. Hébergé avec GitHub Pages.</p>
+    <section class="section" id="projets">
+      <h2>Mes projets</h2>
+
+      <div class="project">
+        <h3>Projet de fin de formation — Application de gestion des adhérents</h3>
+        <p>Développement d’une application de gestion des adhérents pour la Poste Tunisienne : gestion des clients, colis, livraisons et factures. Travail sur la conception de la base de données (MLD / tables) et l’interface CRUD (ajout, modifier, supprimer, lister).</p>
+      </div>
+
+      <div class="project">
+        <h3>Mini-app JavaScript</h3>
+        <p>Une petite application front (exemples d’interactions DOM) pour apprendre à manipuler les éléments d’une page et pratiquer le JavaScript.</p>
+      </div>
+
+      <div class="project">
+        <h3>Portfolio personnel</h3>
+        <p>Création de ce site pour présenter mes compétences, projets et expériences. Hébergé avec GitHub Pages.</p>
+      </div>
+    </section>
+
+    <section class="section" id="formations">
+      <h2>Formations & expériences</h2>
+      <div class="cols">
+        <div class="col">
+          <strong>Formation — BTS Informatique (2024–2026)</strong>
+          <p class="text-muted">Programme de 2 ans : développement web, programmation, gestion de base de données. Actuellement en 1ère année (possibilité de poursuivre en France).</p>
         </div>
-        <div class="projet">
-            <h3>Mini application JavaScript</h3>
-            <p>Une application simple permettant d’interagir avec les utilisateurs et de pratiquer les bases du DOM.</p>
+        <div class="col">
+          <strong>Stage — La Poste Tunisienne</strong>
+          <p class="text-muted">Stage pratique où j’ai développé l’application de gestion des adhérents. J’ai travaillé sur la conception de la base de données, l’interface et les opérations CRUD.</p>
         </div>
+      </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>📧 Email : <a href="mailto:daouda@example.com" style="color:#58a6ff;">daouda@example.com</a></p>
-        <p>🔗 GitHub : <a href="https://github.com/Daouda-keita" style="color:#58a6ff;">@Daouda-keita</a></p>
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li><strong>Email :</strong>&nbsp;<a href="mailto:pkei7879@gmail.com">pkei7879@gmail.com</a></li>
+        <li><strong>Téléphone :</strong>&nbsp;50645599</li>
+        <li><strong>WhatsApp :</strong>&nbsp;<a href="https://wa.me/21653364467" target="_blank">+216 53 364 467</a></li>
+        <li><strong>GitHub :</strong>&nbsp;<a href="https://github.com/Daouda-keita" target="_blank">github.com/Daouda-keita</a></li>
+      </ul>
     </section>
 
-    <footer>
-        <p>© 2025 Daouda Keita - Tous droits réservés.</p>
-    </footer>
+    <footer>© 2025 Daouda — Portfolio</footer>
+  </div>
 </body>
 </html>

@@ -3,10 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Portfolio de Daouda Keita</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: #0d1117;
+            color: #e6edf3;
+        }
+        header {
+            background: #161b22;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            color: #58a6ff;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #c9d1d9;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: #58a6ff;
+        }
+        section {
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #58a6ff;
+            border-bottom: 2px solid #30363d;
+            padding-bottom: 5px;
+        }
+        .projet {
+            background: #161b22;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        footer {
+            background: #161b22;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #8b949e;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenue sur mon portfolio en ligne</h1>
-    <p>Ce site a été créé dans le cadre du mini-projet demandé par mon école.</p>
+    <header>
+        <h1>Portfolio de Daouda Keita</h1>
+        <nav>
+            <a href="#apropos">À propos</a>
+            <a href="#formation">Formation</a>
+            <a href="#projets">Projets</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="apropos">
+        <h2>À propos</h2>
+        <p>Je suis un étudiant passionné par le développement web, la technologie et la création de projets numériques. 
+        Ce portfolio a été réalisé dans le cadre du mini-projet d’admission à SUPINFO.</p>
+    </section>
+
+    <section id="formation">
+        <h2>Formation</h2>
+        <ul>
+            <li><strong>SUPINFO</strong> – Mini-projet d’admission 2025</li>
+            <li><strong>Autoformation</strong> – HTML, CSS, JavaScript, Git et GitHub</li>
+        </ul>
+    </section>
+
+    <section id="projets">
+        <h2>Projets</h2>
+        <div class="projet">
+            <h3>Portfolio en ligne</h3>
+            <p>Un site web personnel pour présenter mes compétences et mes réalisations. Hébergé avec GitHub Pages.</p>
+        </div>
+        <div class="projet">
+            <h3>Mini application JavaScript</h3>
+            <p>Une application simple permettant d’interagir avec les utilisateurs et de pratiquer les bases du DOM.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>📧 Email : <a href="mailto:daouda@example.com" style="color:#58a6ff;">daouda@example.com</a></p>
+        <p>🔗 GitHub : <a href="https://github.com/Daouda-keita" style="color:#58a6ff;">@Daouda-keita</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Daouda Keita - Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
